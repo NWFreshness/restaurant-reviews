@@ -30,9 +30,8 @@ const RestaurantsList = props => {
     
   };
 
-  let params = (new URL(document.location)).searchParams;
   const retrieveRestaurants = () => {
-    RestaurantDataService.getAll(params.get("page"))
+    RestaurantDataService.getAll()
       .then(response => {
         console.log(response.data);
         setRestaurants(response.data.restaurants);
