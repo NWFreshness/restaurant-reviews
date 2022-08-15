@@ -31,7 +31,6 @@ export default class RestaurantsDAO {
         query = { "address.zipcode": { $eq: filters["zipcode"] } }
       }
     }
-
     let cursor
     
     try {
